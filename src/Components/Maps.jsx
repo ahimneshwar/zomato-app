@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";
 
-function SimpleMap({ laitiude, longitude }) {
+function Maps({ laitiude, longitude }) {
   const AnyReactComponent = ({ text }) => <h5>{text}</h5>;
   const [center] = useState({
     lat: 12.9790831,
@@ -23,4 +23,4 @@ function SimpleMap({ laitiude, longitude }) {
   );
 }
 
-export default SimpleMap;
+export default Maps;

@@ -28,7 +28,6 @@ function Reviews({ id }) {
   if (isLoading) {
     return <h1 className="text-muted spinner-border">Loading...</h1>;
   } else {
-    console.log(userReviews);
     return (
       <React.Fragment>
         <div className="container">

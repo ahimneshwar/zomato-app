@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Reviews from "./Reviews";
-import Map from "./Map";
+// import Maps from "./Maps";
 import axios from "axios";
 
 function RestaurantDetails(props) {
@@ -12,6 +12,7 @@ function RestaurantDetails(props) {
     (((restaurantDetails || {}).user_rating || {}).rating_obj || {}).bg_color ||
     {};
   const location = (restaurantDetails || {}).location || {};
+  // const highlights = (restaurantDetails || {}).highlights || {};
   const imgStyle = {
     width: "100%",
     height: "40rem"
@@ -46,7 +47,7 @@ function RestaurantDetails(props) {
   } else {
     return (
       <>
-        <div className="container-fluid  p-5">
+        <div className="container-fluid">
           <div className="card">
             <img
               className="card-img-top img-fluid p-5"
@@ -159,7 +160,7 @@ function RestaurantDetails(props) {
                           <div className="card m-2 p-3 border-0">
                             <h4>Location</h4>
                             <div className="pt-2">
-                              <Map location={location} key={id} />
+                              {/* <Maps location={location} key={id} /> */}
                             </div>
                           </div>
                         </div>
@@ -168,24 +169,23 @@ function RestaurantDetails(props) {
                           <div className="card m-2 p-3 border-0">
                             <h4>Average Cost</h4>
                             <div className="">
-                              Cost for two {""}
+                              Cost for two
                               {restaurantDetails.currency}
                               {restaurantDetails.average_cost_for_two}
                             </div>
                           </div>
                         </div>
 
-                        {/* <div className="col-md-6 col-lg-4">
-                        <div className="card m-2 p-3 border-0" >
-                          <h4>Highlights</h4>
-                          {restaurantDetails.highlights.map(highlight => (
-                            <ul>
-                              <li>{restaurantDetails.highlights}</li>
-                            </ul>
-                          ))}
-                        </div> 
+                        <div className="col-md-6 col-lg-4">
+                          <div className="card m-2 p-3 border-0">
+                            <h4>Highlights</h4>
+                            {/* {highlights.map(highlight => (
+                              <ul>
+                                <li>{highlight}</li>
+                              </ul>
+                            ))} */}
+                          </div>
                         </div>
-                        */}
                       </div>
                     </div>
                   </div>

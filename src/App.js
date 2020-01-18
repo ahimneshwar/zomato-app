@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import RestaurantsBySearch from "./Components/RestaurantsBySearch";
 import RestaurantDetails from "./Components/RestaurantDetails";
+import "./App.css";
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
         <Route exact path="/" component={RestaurantsBySearch} />
         <Route path="/details/:id" component={RestaurantDetails} />
         <br />
-        <div className="jumbotron jumbotron-fluid m-0 p-4">
-          <Link to="/" className=" text-dark text-decoration-none text-center">
+        <div className="jumbotron jumbotron-fluid m-0 p-4 mt-0">
+          <Link
+            to="/"
+            target="_top"
+            className=" text-decoration-none text-danger text-center"
+          >
             <p>Home</p>
           </Link>
         </div>
