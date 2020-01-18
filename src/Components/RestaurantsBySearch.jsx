@@ -78,11 +78,10 @@ function RestaurantsBySearch() {
       </h1>
     );
   } else {
-    console.log(currentRestaurants);
     return (
       <React.Fragment>
         <div className="conatiner mx-auto mb-3">
-          <SearchBar />
+          <SearchBar rest={currentRestaurants} />
         </div>
         <div className="container my-2">
           <div className="card-deck">
