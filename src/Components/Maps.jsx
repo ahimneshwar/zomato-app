@@ -13,7 +13,7 @@ function Maps({ laitiude, longitude }) {
   return (
     <div className="" style={{ height: "15rem", width: "100%" }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyAUVBwgd45X8oJitUtH9UYSQP4cgw_YnuY" }}
+        bootstrapURLKeys={{ key: }}
         defaultCenter={center}
         defaultZoom={zoom}
       >
